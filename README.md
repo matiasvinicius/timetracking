@@ -13,10 +13,16 @@ Todas as páginas tem um relógio que atualiza a cada segundo e a data atual (fo
 ## Configurações
 * Download do Rails, Ruby, Bundler e Sqlite podem ser feitos em : [Rails Installer](http://www.railsinstaller.org/)
 
-* Para migrar o banco de dados, entre no diretório *timetracking* pelo seu terminal e digite o seguinte código:
+* Para migrar o banco de dados, entre no diretório *timetracking* pelo git e digite o seguinte código:
 ```
 bin/rails db:migrate RAILS_ENV=development 
 ```
+* Para executar, digite no diretório timetracking:
+```
+rails s
+```
+Lembrando que o sistema está disponível em localhost:3000
+
 
 * Ruby version: 2.3.3
 
