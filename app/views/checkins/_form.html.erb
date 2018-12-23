@@ -1,0 +1,32 @@
+<script type="text/javascript">getLocation()</script>
+
+<%= form_with(model: checkin, local: true) do |form| %>
+  <% if checkin.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(checkin.errors.count, "error") %> prohibited this checkin from being saved:</h2>
+
+      <ul>
+      <% checkin.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <!--Errors-->
+  <p id = "situation" class = "red"></p>
+
+  <h4>Checkin comment</h4>
+  <%= form.text_field :typeCheckin, id: :checkin_typeCheckin , class: "form-control" %>
+
+  <%= form.text_field :latitude, class: "catchLatitude", id: :checkin_latitude %>
+
+  <%= form.text_field :longitude , class: "catchLongitude" ,  id: :checkin_longitude %>
+
+  <br>
+
+  <p><%= form.submit "Checkin" , class: "btn btn-secondary btn-lg btn-block" , onclick: "return validateForm()" %></p>
+
+  <p><%= link_to 'Back', checkins_path , class: "btn btn-default" %></p>
+
+<% end %>

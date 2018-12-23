@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<div class = "text-center">
+  <%= link_to 'New Checkin', new_checkin_path, class: "btn btn-outline-dark" %>
+</div>
+
+<br>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Checkin comment</th>
+      <th scope="col">When</th>
+      <th scope="col">Show</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @checkins.each do |checkin| %>
+      <tr>
+        <td><%= checkin.typeCheckin %></td>
+        <td><%= checkin.created_at %></td>
+        <td><%= link_to 'Details ', checkin, class: "btn btn-link" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

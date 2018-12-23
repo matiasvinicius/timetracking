@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Timetracking</title>
+    <%= csrf_meta_tags %>
+    
+    <!-- Bootstrap -->
+    <%= stylesheet_link_tag 'https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css' %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+    <main role="main" class = "container">
+      <h2 class = "text-center">Timetracking</h2>
+      <hr>
+
+      <h4 class = "text-center">
+        <div id = "clock"></div>
+      </h4>
+
+      <p class = "text-center">(BRST UTC-02)</p>
+
+      <h6 class = "text-center">
+        <div id = "date">
+          <script type="text/javascript">startTime(),getDate()</script>
+        </div>
+      </h6>
+      
+      <%= yield %>
+
+    </main><!-- /.container -->
+
+  </body>
+</html>
