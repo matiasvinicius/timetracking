@@ -15,12 +15,6 @@ RSpec.describe Checkin, type: :model do
   	it 'Latitude' do
   		checkin = Checkin.new(typeCheckin: 'example', latitude: '123.45', created_at:"mm/dd/yyy UTC").save
   		expect(checkin).to eq(false)
-  	end  	
-
-  	it 'Created at' do
-  		checkin = Checkin.new(longitude: '123.45', latitude: '123.45', typeCheckin:"example").save
-  		expect(checkin).to eq(false)
-  	end  
-
+  	end 
   end
 end
