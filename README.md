@@ -15,11 +15,11 @@ Todas as páginas tem um relógio que atualiza a cada segundo e a data atual (fo
 
 * Após clonar ou fazer o download zip do projeto, a pasta com os arquivos deve se chamar timetracking, caso necessário, renomeie-a.
 
-* Migre o banco de dados, para isso entre no diretório *timetracking/bin* pelo git ou Prompt de Comando e digite o seguinte código:
+* Migre o banco de dados, para isso entre no diretório *timetracking/bin* pelo git CMD ou Prompt de Comando e digite o seguinte código:
 ```
 $ rails db:migrate RAILS_ENV=development 
 ```
-* Para rodar no servidor, digite no diretório timetracking pelo Prompt:
+* Para rodar no servidor, digite no diretório timetracking pelo Prompt ou git CMD:
 ```
 $ rails s
 ```
@@ -33,11 +33,11 @@ $ rails s
 ```
 
 #### Testes
-* Na pasta bin, digite pelo console:
+* Na pasta bin, digite pelo Prompt ou git CMD:
 ```
 rails db:migrate RAILS_ENV=test
 ```
-* Entre no diretório principal (timetracking) pelo Prompt e digite para executar os testes:
+* Entre no diretório principal (timetracking) pelo Prompt ou git CMDe digite para executar os testes:
 ```
 rspec
 ```
