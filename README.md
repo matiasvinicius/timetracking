@@ -13,6 +13,8 @@ Todas as páginas tem um relógio que atualiza a cada segundo e a data atual (fo
 ## Configurações
 * Download do Rails, Ruby, Bundler e Sqlite podem ser feitos em : [Rails Installer](http://www.railsinstaller.org/)
 
+* Após clonar ou fazer o download zip do projeto, a pasta com os arquivos deve se chamar timetracking, caso necessário, renomeie-a.
+
 * Para migrar o banco de dados, entre no diretório *timetracking/bin* pelo git CMD ou Prompt de Comando e digite o seguinte código:
 ```
 $ rails db:migrate RAILS_ENV=development 
