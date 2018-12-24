@@ -13,16 +13,25 @@ Todas as páginas tem um relógio que atualiza a cada segundo e a data atual (fo
 ## Configurações
 * Download do Rails, Ruby, Bundler e Sqlite podem ser feitos em : [Rails Installer](http://www.railsinstaller.org/)
 
-* Para migrar o banco de dados, entre no diretório *timetracking* pelo git e digite o seguinte código:
+* Após clonar ou fazer o download zip do projeto, a pasta com os arquivos deve se chamar timetracking, caso necessário, renomeie-a.
+
+* Para migrar o banco de dados, entre no diretório *timetracking/bin* pelo git ou Prompt de Comando e digite o seguinte código:
 ```
-bin/rails db:migrate RAILS_ENV=development 
+$ rails db:migrate RAILS_ENV=development 
 ```
-* Para executar, digite no diretório timetracking:
+* Para rodar no servidor, digite no diretório timetracking:
 ```
-rails s
+$ rails s
+ s
 ```
 Lembrando que o sistema está disponível em localhost:3000
 
+* Caso ocorra algum problema para acessar o servidor, digite os três comandos abaixo no diretório timetracking
+```
+$ gem update
+$ bundle install
+$ rails s
+```
 
 * Ruby version: 2.3.3
 
@@ -33,3 +42,4 @@ Lembrando que o sistema está disponível em localhost:3000
 * A geolocalização é solicitada assim que o usuário entrar na página para realizar o checkin, isso para acelerar a captura das coordenadas enquanto ele ainda não escreve o comentário, pois dependemos da velocidade da conexão para tal.
 * Existe a validação dos campos no próprio servidor (app/models/checkin.rb) e por javascript, impedindo o envio de dados inadequados.
 * Inverti a ordem da lista dos checkins em app/controllers/checkins_controller.rb, ordenando por data (created_at DESC).
+* Inseri testes simples em RSpec para verificar a validação dos campo para registro do checkin.
