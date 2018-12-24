@@ -22,7 +22,6 @@ $ rails db:migrate RAILS_ENV=development
 * Para rodar no servidor, digite no diretório timetracking:
 ```
 $ rails s
- s
 ```
 Lembrando que o sistema está disponível em localhost:3000
 
